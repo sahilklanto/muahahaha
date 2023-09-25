@@ -1,0 +1,21 @@
+{
+  "rootNotionPageId": "5a99a01a5fa84d7aa687b9f52d20523c",
+  "rootNotionSpaceId": null,
+  "name": "Next.js Notion Starter Kit",
+  "domain": "nextjs-notion-starter-kit.transitivebullsh.it",
+  "author": "Jiffy",
+  "description": "Example Next.js Notion Starter Kit Site",
+  "twitter": "transitive_bs",
+  "github": "transitive-bullshit",
+  "linkedin": "fisch2",
+  "defaultPageIcon": null,
+  "defaultPageCover": null,
+  "defaultPageCoverPosition": 0.5,
+  "isPreviewImageSupportEnabled": true,
+  "isRedisEnabled": false,
+  "pageUrlOverrides": {
+  },
+  "navigationStyle": "custom",
+  "navigationLinks": [
+  ]
+}
