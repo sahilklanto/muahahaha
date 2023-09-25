@@ -3,7 +3,7 @@ import { ParsedUrlQuery } from 'querystring'
 
 export * from 'notion-types'
 
-export type NavigationStyle = 'default' | 'custom'
+export type NavigationStyle = 'default' | 'custom' | string
 
 export interface PageError {
   message?: string
