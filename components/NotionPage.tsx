@@ -28,6 +28,8 @@ import { PageAside } from './PageAside'
 import { PageHead } from './PageHead'
 import styles from './styles.module.css'
 
+import ReactDOMServer from 'react-dom/server';
+
 // -----------------------------------------------------------------------------
 // dynamic imports for optional components
 // -----------------------------------------------------------------------------
@@ -202,8 +204,12 @@ export const NotionPage: React.FC<types.PageProps> = ({
 
   const footer = React.useMemo(() => <Footer />, [])
 
-  if (router.isFallback) {
-    return <Loading />
+  try {
+    if (router.isFallback) {
+      return <Loading />
+    }
+  } catch(err) {
+    console.log("error while loading isfallback", err);
   }
 
   if (error || !site || !block) {

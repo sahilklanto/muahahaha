@@ -11,6 +11,7 @@ export async function resolveNotionPage(domain: string, rawPageId?: string) {
   let pageId: string
   let recordMap: ExtendedRecordMap
 
+  console.log('RESOLVING NOTION PAGE,', domain, rawPageId);
   if (rawPageId && rawPageId !== 'index') {
     pageId = parsePageId(rawPageId)
 
@@ -87,5 +88,8 @@ export async function resolveNotionPage(domain: string, rawPageId?: string) {
   }
 
   const props = { site, recordMap, pageId }
+  // const acl_awaited = await acl.pageAcl(props);
+  // console.log('ACL AWAITED ', acl_awaited);
+  console.log(JSON.stringify(props));
   return { ...props, ...(await acl.pageAcl(props)) }
 }
