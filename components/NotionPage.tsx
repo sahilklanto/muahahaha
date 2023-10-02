@@ -28,8 +28,6 @@ import { PageAside } from './PageAside'
 import { PageHead } from './PageHead'
 import styles from './styles.module.css'
 
-import ReactDOMServer from 'react-dom/server';
-
 // -----------------------------------------------------------------------------
 // dynamic imports for optional components
 // -----------------------------------------------------------------------------

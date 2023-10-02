@@ -20,3 +20,16 @@ module.exports = withBundleAnalyzer({
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"
   }
 })
+
+const nextConfig = {
+  cleanDistDir: false,
+  images: {
+    unoptimized: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+
+};
+
+module.exports = nextConfig;
