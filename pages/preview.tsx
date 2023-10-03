@@ -12,14 +12,8 @@ export default function Preview() {
 
   useEffect(() => {
     async function fetchData() {
-      const res = await fetch(`${apiHost}${api.getNotionPageProps}`, {
-        method: 'POST',
-        body: JSON.stringify({
-          pageId: pageid
-        }),
-        headers: {
-          'content-type': 'application/json'
-        }
+      const res = await fetch(`${apiHost}${api.getNotionPageProps}?pageId=${pageid}`, {
+        method: 'GET',
       }).then((response) => response.json())
         .then((data) => {
           setProps(data);
