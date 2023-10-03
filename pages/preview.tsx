@@ -22,8 +22,10 @@ export default function Preview() {
         }
       }).then((response) => response.json())
         .then((data) => {
-          debugger;
           setProps(data);
+        })
+        .catch((err) => {
+          console.log(err)
         })
     }
     fetchData()
